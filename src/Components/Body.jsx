@@ -101,7 +101,7 @@ const Body = () => {
         Trending Products
       </h1>
       {/* Slider Cards */}
-      <div className="p-10">
+      <div className="py-10 px-2">
         <Slider {...settings}>
           {sliderData.map((e, i) => {
             return (

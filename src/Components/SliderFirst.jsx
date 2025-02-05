@@ -2,7 +2,7 @@ import React from "react";
 
 const SliderFirst = ({ img , name , cost, location , distance}) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow-lg bg-white p-4 max-w-[250px] m-auto transition-all duration-500 hover:scale-105">
+    <div className="rounded-lg sm:w-full overflow-hidden shadow-lg bg-white p-4 max-w-[250px] m-auto transition-all duration-500 hover:scale-105">
       <div className="w-full h-48 overflow-hidden rounded-lg">
         <img src={img} alt="Product Image" className=" object-cover w-full" />
       </div>
