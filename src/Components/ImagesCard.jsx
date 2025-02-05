@@ -12,7 +12,7 @@ const ImagesCard = () => {
         <img
           src={personal_care}
           alt="Personal Care"
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-1000   group-hover:scale-110"
         />
         <p className="absolute bottom-8 left-8 text-pink-700 text-lg font-bold bg-white bg-opacity-50 px-4 py-2 rounded-lg">
           Personal Care
@@ -27,7 +27,7 @@ const ImagesCard = () => {
             <img
               src={oils}
               alt="Oils"
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             <p className="absolute bottom-4 left-4 text-pink-700 text-lg font-bold bg-white bg-opacity-50 px-4 py-1 rounded-lg">
               Oils
@@ -39,7 +39,7 @@ const ImagesCard = () => {
             <img
               src={teas}
               alt="Teas"
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             <p className="absolute bottom-4 left-4 text-pink-700 text-lg font-bold bg-white bg-opacity-50 px-4 py-1 rounded-lg">
               Teas
@@ -52,7 +52,7 @@ const ImagesCard = () => {
           <img
             src={herbs}
             alt="Herbs"
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />
           <p className="absolute bottom-4 left-4 text-pink-700 text-lg font-bold bg-white bg-opacity-50 px-4 py-2 rounded-lg">
             Herbs

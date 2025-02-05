@@ -1,21 +1,53 @@
-import { BrowserRouter , Routes , Route } from 'react-router-dom'
-import './App.css'
-import Navbar from './Components/Navbar'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Body from "./Components/Body";
+import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
+import SliderFirst from "./Components/SliderFirst";
+import { cardsData } from "./Constant/sliderData";
 
-import Body from './Components/Body'
 function App() {
-
   return (
     <>
       <BrowserRouter>
-     <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path='/' element={<Body/>} ></Route>
-         
+          <Route path="/" element={<Body />} />
+          <Route path="/contact" element={<Contact />} />
+          {cardsData.map((e, i) => (
+            <Route
+              key={i}
+              path={`/items/${i}`} // Giving each item a unique path based on index
+              element={
+                <SliderFirst
+                  img={e.img}
+                  name={e.title}
+                  cost={e.cost}
+                  location={e.location}
+                  distance={e.distance}
+                />
+              }
+            />
+          ))}
+
+        <Route path="/items" element={cardsData.map((e,i)=>{
+          return(
+            <SliderFirst
+            key={i}
+            img={e.img}
+            name={e.title}
+            cost={e.cost}
+            location={e.location}
+            distance={e.distance}
+          />
+          )
+        })}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

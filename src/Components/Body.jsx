@@ -5,9 +5,13 @@ import SliderFirst from "./SliderFirst";
 // Import Slider Card Data
 import { sliderData } from "../Constant/sliderData";
 
-// Import Category Data 
+// Import Category Data
 
 import { dataCategory } from "../Constant/sliderData";
+
+// Import Brands Data 
+
+import { companyIcons } from "../Constant/sliderData";
 
 // Import Slider
 import Slider from "react-slick";
@@ -18,20 +22,20 @@ import "slick-carousel/slick/slick-theme.css";
 // Import Header Image
 
 import headerImage from "../assets/Images/headerImage.png";
-import heading3img from "../assets/Images/headerimg3.webp"
-let imgArr = [headerImage  , heading3img, ]
+import heading3img from "../assets/Images/headerimg3.webp";
+import heading4img from "../assets/Images/headerimg4.webp";
+import heading5img from "../assets/Images/headerimg5.webp";
+import heading6img from "../assets/Images/headerimg6.webp";
+let imgArr = [headerImage, heading3img, heading4img, heading5img, heading6img];
 
-// Import Video GIF  
-import GIFVideo from '../assets/Images/GIFVideo.mp4';  
+// Import Video GIF
+import GIFVideo from "../assets/Images/GIFVideo.mp4";
 
-//  Import Slider Category  
+//  Import Slider Category
 import SliderCategory from "./SliderCategory";
 import ImagesCard from "./ImagesCard";
 import HeaderSliderImage from "./HeaderSliderImage";
-
-
-
-
+import Brands from "./Brands";
 
 const Body = () => {
   //   Slider Settings
@@ -71,34 +75,31 @@ const Body = () => {
     ],
   };
   var settings2 = {
-    dots: false,
+    dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    pauseOnHover: true,
-  
+    pauseOnHover: false,
   };
   return (
     <>
       {/* Header Image  */}
-     
-
+      <div className="p-10">
         {
-            <Slider {...settings2}>
-                {imgArr.map((e, i) => {
-                    return (
-                        <HeaderSliderImage key={i} img={e} />
-                    )
-                })}
-            </Slider>
+          <Slider {...settings2}>
+            {imgArr.map((e, i) => {
+              return <HeaderSliderImage key={i} img={e} />;
+            })}
+          </Slider>
         }
-
-    
+      </div>
 
       {/* Heading First */}
-        <h1 className="text-3xl text-center mt-10 bg-gray-300 p-3 font-bolder shadow-lg">Trending Products</h1>
+      <h1 className="text-3xl text-center mt-10 bg-gray-300 p-3 font-bolder shadow-lg">
+        Trending Products
+      </h1>
       {/* Slider Cards */}
       <div className="p-10">
         <Slider {...settings}>
@@ -120,39 +121,55 @@ const Body = () => {
       {/* Video  */}
 
       <div className="flex justify-center items-center bg-gray-100 py-4 relative">
-  <video
-    src={GIFVideo}
-    className="w-full max-w-6xl h-auto rounded-xl shadow-lg"
-    autoPlay
-    loop
-    muted
-  ></video>
+        <video
+          src={GIFVideo}
+          className="w-full max-w-6xl h-auto rounded-xl shadow-lg"
+          autoPlay
+          loop
+          muted
+        ></video>
 
-  <div className="absolute bottom-22 left-22 bg-white opacity-50 p-6 rounded-xl shadow-md max-w-xs">
-    <h1 className="text-xl font-semibold mb-2">PLANT SEEDS OF HEALTH</h1>
-    <p className="text-sm mb-4">
-      Introducing organic herb and vegetable seed packets, grown at our partner farm in Southern Oregon. Every seed purchase supports regenerative agriculture and restoration of wild spaces.
-    </p>
-    <button className="bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600 transition">
-      SHOP SEEDS NOW
-    </button>
-  </div>
-</div>
+        <div className="absolute bottom-22 left-22 bg-white opacity-50 p-6 rounded-xl shadow-md max-w-xs">
+          <h1 className="text-xl font-semibold mb-2">PLANT SEEDS OF HEALTH</h1>
+          <p className="text-sm mb-4">
+            Introducing organic herb and vegetable seed packets, grown at our
+            partner farm in Southern Oregon. Every seed purchase supports
+            regenerative agriculture and restoration of wild spaces.
+          </p>
+          <button className="bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600 transition">
+            SHOP SEEDS NOW
+          </button>
+        </div>
+      </div>
 
-    {/* Category cards */}
-      <div className="flex justify-center gap-25 p-8 py-14 bg-white mt-10 flex-wrap">
-      {
-            dataCategory.map((e,i)=>{
-                return (
-                    <SliderCategory key={i} img={e.img} title={e.title}/>
-                )
-            })
-        }
+      {/* Heading First */}
+      <h1 className="text-3xl text-center mt-10 bg-gray-300 p-3 font-bolder shadow-lg">
+      Trending Categories
+      </h1>
+      {/* Category cards */}
+      <div className="flex justify-center gap-16  py-14 bg-white mt-10 flex-wrap">
+        {dataCategory.map((e, i) => {
+          return <SliderCategory key={i} img={e.img} title={e.title} />;
+        })}
       </div>
 
       {/* Images card */}
 
-      <ImagesCard/>
+      <ImagesCard />
+
+
+      {/* Brands  */}
+
+        <div className="flex flex-wrap p-5 gap-10 justify-center">
+            {
+                companyIcons.map((e,i)=>{
+                    return (
+                        <Brands img={e.iconUrl} name={e.name} key={i}/>
+                    )
+                })
+            }
+        </div>
+
     </>
   );
 };
