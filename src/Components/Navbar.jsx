@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import { useState } from 'react';
+import NavLogo from "../assets/Images/NavLogo.webp"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
       <nav className='bg-gray-800 text-white flex justify-between p-3'>
         <div className='flex gap-3 items-center'>
           <img
-            src="https://imgs.search.brave.com/ahE_3g4LBiwT-_VcmzAppS8Fokpk_KFTdOYJdWsY3xY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzYwLzEyLzQw/LzM2MF9GXzI2MDEy/NDA2OF9KSmp1a0U5/S0lSSEQ4aWh2UmRq/NGNYTnJ4OUhZcFln/eS5qcGc"
+            src={NavLogo}
             alt=""
             className='h-14 w-14 rounded-full'
           />
