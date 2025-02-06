@@ -76,20 +76,20 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden z-50`}
       >
-        <ul className='flex flex-col gap-7 text-xl'>
-          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 p-5 hover:rounded-xl'>
+        <ul className='flex flex-col gap-1 text-xl'>
+          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
             <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
           </li>
-          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 p-5 hover:rounded-xl'>
+          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
             <NavLink to="/about" onClick={toggleMenu}>About</NavLink>
           </li>
-          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 p-5 hover:rounded-xl'>
+          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
             <NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink>
           </li>
-          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 p-5 hover:rounded-xl'>
+          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
             <NavLink to="/login" onClick={toggleMenu}>Login/Signup</NavLink>
           </li>
-          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 p-5 hover:rounded-xl'>
+          <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
             <NavLink to="/cart" className="flex gap-2 " onClick={toggleMenu}>
               Cart <FaShoppingCart className='pt-2 h-full text-lg' />
             </NavLink>

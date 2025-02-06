@@ -9,7 +9,7 @@ import { sliderData } from "../Constant/sliderData";
 
 import { dataCategory } from "../Constant/sliderData";
 
-// Import Brands Data 
+// Import Brands Data
 
 import { companyIcons } from "../Constant/sliderData";
 
@@ -119,32 +119,35 @@ const Body = () => {
       </div>
 
       {/* Video  */}
-
-      <div className="flex justify-center items-center bg-gray-100 py-4 relative">
+      <div className="flex w-[96%] justify-center items-center bg-gray-100 py-4 relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
         <video
           src={GIFVideo}
-          className="w-full max-w-6xl h-auto rounded-xl shadow-lg"
+          className="w-full max-w-6xl h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] rounded-xl shadow-lg object-cover"
           autoPlay
           loop
           muted
         ></video>
 
-        <div className="absolute bottom-22 left-22 bg-white opacity-50 p-6 rounded-xl shadow-md max-w-xs">
-          <h1 className="text-xl font-semibold mb-2">PLANT SEEDS OF HEALTH</h1>
-          <p className="text-sm mb-4">
-            Introducing organic herb and vegetable seed packets, grown at our
-            partner farm in Southern Oregon. Every seed purchase supports
-            regenerative agriculture and restoration of wild spaces.
-          </p>
-          <button className="bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600 transition">
-            SHOP SEEDS NOW
-          </button>
+        <div className="absolute inset-0 flex justify-center items-center opacity-50">
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-md max-w-xs sm:max-w-sm md:max-w-md text-center">
+            <h1 className="text-lg sm:text-xl font-semibold mb-2">
+              PLANT SEEDS OF HEALTH
+            </h1>
+            <p className="text-sm sm:text-base mb-4">
+              Introducing organic herb and vegetable seed packets, grown at our
+              partner farm in Southern Oregon. Every seed purchase supports
+              regenerative agriculture and restoration of wild spaces.
+            </p>
+            <button className="bg-green-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-green-600 transition">
+              SHOP SEEDS NOW
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Heading First */}
       <h1 className="text-3xl text-center mt-10 bg-gray-300 p-3 font-bolder shadow-lg">
-      Trending Categories
+        Trending Categories
       </h1>
       {/* Category cards */}
       <div className="flex justify-center gap-16  py-14 bg-white mt-10 flex-wrap">
@@ -157,19 +160,13 @@ const Body = () => {
 
       <ImagesCard />
 
-
       {/* Brands  */}
 
-        <div className="flex flex-wrap p-5 gap-10 justify-center">
-            {
-                companyIcons.map((e,i)=>{
-                    return (
-                        <Brands img={e.iconUrl} name={e.name} key={i}/>
-                    )
-                })
-            }
-        </div>
-
+      <div className="flex flex-wrap p-5 gap-10 justify-center">
+        {companyIcons.map((e, i) => {
+          return <Brands img={e.iconUrl} name={e.name} key={i} />;
+        })}
+      </div>
     </>
   );
 };

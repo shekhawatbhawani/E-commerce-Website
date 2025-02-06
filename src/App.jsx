@@ -6,6 +6,8 @@ import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import SliderFirst from "./Components/SliderFirst";
 import { cardsData } from "./Constant/sliderData";
+import CardDetails from "./Components/CardDetails";
+import OrderLocation from "./Components/OrderLocation";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Body />} />
+          <Route path="/ttt" element={<CardDetails />} />
+          <Route path="/order" element={<OrderLocation />} />
           <Route path="/contact" element={<Contact />} />
           {cardsData.map((e, i) => (
             <Route
