@@ -42,7 +42,7 @@ const Body = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -107,9 +107,13 @@ const Body = () => {
             return (
               <SliderFirst
                 key={i}
-                img={e.img}
+                img1={e.img1}
+                img2={e.img2}
+                img3={e.img3}
+                img4={e.img4}
                 name={e.title}
                 cost={e.cost}
+                desc = {e.description}
                 location={e.location}
                 distance={e.distance}
               />

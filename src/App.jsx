@@ -8,6 +8,10 @@ import SliderFirst from "./Components/SliderFirst";
 import { cardsData } from "./Constant/sliderData";
 import CardDetails from "./Components/CardDetails";
 import OrderLocation from "./Components/OrderLocation";
+import SignIn from "./Components/SignIn";
+import Review from "./Components/Review";
+import OrderSuccess from "./Components/Ordersuccessful ";
+import About from "./Components/About";
 
 function App() {
   return (
@@ -16,6 +20,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Body />} />
+          <Route path="/sign" element={<SignIn />} />
+          <Route path="/review" element={<Review />} />
+          <Route path="/order-submitted" element={<OrderSuccess />} />
+          <Route path="/about" element={<About />} />
+
           <Route path="/ttt" element={<CardDetails />} />
           <Route path="/order" element={<OrderLocation />} />
           <Route path="/contact" element={<Contact />} />

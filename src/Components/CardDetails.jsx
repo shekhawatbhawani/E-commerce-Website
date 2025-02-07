@@ -1,26 +1,39 @@
 import React from "react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Accordion from "./Accordion";
 const CardDetails = () => {
-  let [img1, setImg1] = useState("https://images.pexels.com/photos/30507116/pexels-photo-30507116/free-photo-of-cozy-cafe-scene-with-cappuccino-and-book.jpeg?auto=compress&cs=tinysrgb&w=600")
-  let [img2, setImg2] = useState("https://images.pexels.com/photos/30562458/pexels-photo-30562458/free-photo-of-woman-enjoying-watermelon-on-a-summer-day.jpeg?auto=compress&cs=tinysrgb&w=600")
-  let [img3, setImg3] = useState("https://images.pexels.com/photos/30538480/pexels-photo-30538480/free-photo-of-fresh-summer-fruits-on-a-checkered-tablecloth.jpeg?auto=compress&cs=tinysrgb&w=600")
-  let [img4, setImg4] = useState("https://images.pexels.com/photos/30540388/pexels-photo-30540388/free-photo-of-close-up-of-fresh-lychee-fruits-on-branch.jpeg?auto=compress&cs=tinysrgb&w=600")
-  let [img5, setImg5] = useState("https://images.pexels.com/photos/30540398/pexels-photo-30540398/free-photo-of-stylish-woman-holding-dessert-in-studio-setting.jpeg?auto=compress&cs=tinysrgb&w=600")
-  let [mainImg , setMainImg] = useState("https://images.pexels.com/photos/30562458/pexels-photo-30562458/free-photo-of-woman-enjoying-watermelon-on-a-summer-day.jpeg?auto=compress&cs=tinysrgb&w=600")
+  
+    let navigate = useNavigate()
+  
+    const location = useLocation();
+    const { img1, img2, img3, img4 , name, cost, location: orderLocation, distance , desc } = location.state;
+
+ console.log(desc);
+ 
+  
+    let handelOrder = () => {
+      navigate("/order", {
+        state: {
+          img1,
+          name,
+          cost,
+          orderLocation,
+          distance,
+        },
+      });
+    };
+  let [image1, setImg1] = useState(img1)
+  let [image2, setImg2] = useState(img2)
+  let [image3, setImg3] = useState(img3)
+  let [image4, setImg4] = useState(img4)
+  let [image5, setImg5] = useState("https://images.pexels.com/photos/30540398/pexels-photo-30540398/free-photo-of-stylish-woman-holding-dessert-in-studio-setting.jpeg?auto=compress&cs=tinysrgb&w=600")
+  let [mainImg , setMainImg] = useState(img1)
 
   let handelImage = (e)=>{
       setMainImg(e.target.src)
   }
-
-  let navigate = useNavigate()
-
-  
-  let handelOrder = ()=>{
-  navigate("/order")
-}
-
 
 
 
@@ -33,31 +46,31 @@ const CardDetails = () => {
           {/* Thumbnails */}
           <div className="flex sm:flex-col gap-3">
             <img
-              src={img1}
+              src={image1}
               alt=""
               className="h-20 w-20 mt-3 rounded-2xl shadow-lg object-cover"
               onClick={handelImage}
             />
             <img
-              src={img2}
+              src={image2}
               alt=""
               className="h-20 w-20 mt-3 rounded-2xl shadow-lg object-cover"
               onClick={handelImage}
             />
             <img
-              src={img3}
+              src={image3}
               className="h-20 w-20 mt-3 rounded-2xl shadow-lg object-cover"
               onClick={handelImage}
               alt=""
             />
             <img
-              src={img4}
+              src={image4}
               alt=""
               className="h-20 w-20 mt-3 rounded-2xl shadow-lg object-cover"
               onClick={handelImage}
             />
             <img
-              src={img5}
+              src={image5}
               className="h-20 w-20 mt-3 rounded-2xl shadow-lg object-cover"
               onClick={handelImage}
               alt=""
@@ -65,7 +78,7 @@ const CardDetails = () => {
           </div>
 
           {/* Main Image */}
-          <div className="w-full sm:w-[450px] h-[300px] sm:h-[450px]">
+          <div className="w-full sm:w-[400px] h-[250px] sm:h-[450px]">
             <img
               src={mainImg}
               className="w-full h-full object-cover rounded-lg"
@@ -87,11 +100,11 @@ const CardDetails = () => {
 
       {/* Content Card */}
       <div className="flex flex-col">
-        <h1 className="text-xl p-2 sm:text-5xl font-semibold mb-3">Septilin Syrup</h1>
-        <p className="w-xl p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, dolorum. Obcaecati rem nesciunt impedit necessitatibus culpa</p>
+        <h1 className="text-xl p-2 sm:text-4xl w-lg font-semibold mb-3">{name}</h1>
+        <p className="w-xl p-2">{desc}</p>
         <p className="text-lg p-2 sm:text-xl font-medium">
           <span className="font-semibold">MRP: </span>
-          <span className="text-red-500">₹ 200.00</span>
+          <span className="text-red-500">₹ {cost}</span>
         </p>
         <p className="text-sm p-2 sm:text-base text-gray-600 mt-2">
           Inclusive of all taxes. Shipping calculated at checkout.

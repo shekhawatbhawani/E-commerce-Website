@@ -1,6 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
+import { IoMdContact } from "react-icons/io";
+import { SiGnuprivacyguard } from "react-icons/si";
+import { IoPerson } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 import { useState } from 'react';
 import NavLogo from "../assets/Images/NavLogo.webp"
@@ -59,7 +63,7 @@ const Navbar = () => {
               <NavLink to="/contact">Contact</NavLink>
             </li>
             <li className='hover:underline hover:text-red-200'>
-              <NavLink to="/login">Login/Signup</NavLink>
+              <NavLink to="/sign">Login/Signup</NavLink>
             </li>
             <li className='hover:underline hover:text-red-200'>
               <NavLink to="/cart" className="flex gap-2">
@@ -76,22 +80,22 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden z-50`}
       >
-        <ul className='flex flex-col gap-1 text-xl'>
+        <ul className='flex flex-col gap-1 mt-10 text-xl'>
           <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
-            <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
+            <NavLink to="/" onClick={toggleMenu} className="flex gap-3"><FaHome /> Home</NavLink>
           </li>
           <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
-            <NavLink to="/about" onClick={toggleMenu}>About</NavLink>
+            <NavLink to="/about" onClick={toggleMenu} className="flex gap-3"> <IoPerson /> About</NavLink>
           </li>
           <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
-            <NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink>
+            <NavLink to="/contact" onClick={toggleMenu} className="flex gap-3"> <IoMdContact /> Contact</NavLink>
           </li>
           <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
-            <NavLink to="/login" onClick={toggleMenu}>Login/Signup</NavLink>
+            <NavLink to="/sign" onClick={toggleMenu} className="flex gap-3"> <SiGnuprivacyguard /> Login/Signup</NavLink>
           </li>
           <li className='hover:underline hover:text-red-200 hover:bg-gray-600 px-5 py-3 hover:rounded-xl'>
-            <NavLink to="/cart" className="flex gap-2 " onClick={toggleMenu}>
-              Cart <FaShoppingCart className='pt-2 h-full text-lg' />
+            <NavLink to="/cart" className="flex gap-3" onClick={toggleMenu}>
+               <FaShoppingCart className='pt-2 h-full text-lg' /> Cart
             </NavLink>
           </li>
         </ul>

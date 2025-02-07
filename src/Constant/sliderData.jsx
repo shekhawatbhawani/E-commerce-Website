@@ -1,67 +1,113 @@
 export const sliderData =   [
     {
-      "img": "https://m.media-amazon.com/images/I/61oNTRtzcQL._AC_UL480_FMwebp_QL65_.jpg",
+      "img1": "https://m.media-amazon.com/images/I/61oNTRtzcQL._AC_UL480_FMwebp_QL65_.jpg",
+      "img2": "https://m.media-amazon.com/images/I/61+6TMO6eiL._SX679_.jpg",
+      "img3": "https://m.media-amazon.com/images/I/61swvPJ9fLL._SX679_.jpg",
+      "img4": "https://m.media-amazon.com/images/I/61eny2HoR4L._SX679_.jpg",
+      "video": "https://m.media-amazon.com/images/I/61oNTRtzcQL._AC_UL480_FMwebp_QL65_.jpg",
       "title": "KAMA ROSE LIP BALM",
       "cost": "₹598",
       "location": "New Delhi",
-      "distance": "47 km"
-    },
-    {
-      "img": "https://m.media-amazon.com/images/I/51RruV8mhfL._AC_UL480_FMwebp_QL65_.jpg",
-      "title": "Lip Balm",
-      "cost": "₹4253",
-      "location": "Hyderabad",
-      "distance": "23 km"
-    },
-    {
-      "img": "https://m.media-amazon.com/images/I/618lxX-vcTL._SX679_.jpg",
-      "title": "Ayurveda: Ancient Healing Science",
-      "cost": "₹4886",
-      "location": "Kolkata",
-      "distance": "33 km"
-    },
-    {
-      "img": "https://m.media-amazon.com/images/I/511emskZ4yL._SX679_.jpg",
-      "title": "Ceramide Lip Balm",
-      "cost": "₹3971",
-      "location": "Chennai",
-      "distance": "9 km"
-    },
-    {
-      "img": "https://m.media-amazon.com/images/I/61S5qtPqyBL._SX679_.jpg",
-      "title": "Ilerbal Lip Balm",
-      "cost": "₹2949",
-      "location": "Ahmedabad",
-      "distance": "1 km"
-    },
-    {
-      "img": "https://m.media-amazon.com/images/I/6108uSkJQKL._SX679_.jpg",
-      "title": "BENEFITS",
-      "cost": "₹4492",
-      "location": "Kolkata",
-      "distance": "30 km"
+      "distance": "47 km",
+      "description": "A luxurious rose-scented lip balm enriched with natural oils to keep your lips soft and hydrated."
     },
     
     {
-      "img": "https://m.media-amazon.com/images/I/61RitVgCGML._SX679_.jpg",
-      "title": "hero ingrediep",
+      "img1": "https://www.sephora.com/productimages/sku/s2495497-main-zoom.jpg?imwidth=1224",
+      "img2": "https://www.sephora.com/productimages/sku/s2495497-av-16-zoom.jpg?imwidth=1224",
+      "img3": "https://www.sephora.com/productimages/sku/s2495497-av-12-zoom.jpg?imwidth=1224",
+      "img4": "https://www.sephora.com/productimages/sku/s2495497-av-19-zoom.jpg?imwidth=1224",
+      "video": "",
+      "title": "Lip Butter Balm for Hydration & Shine",
+      "cost": "₹4253",
+      "location": "Hyderabad",
+      "distance": "23 km",
+      "description": "A luxurious rose-scented lip balm enriched with natural oils to keep your lips soft and hydrated.."
+    },
+    {
+      "img1": "https://m.media-amazon.com/images/I/71gS-slF6jL._SL1500_.jpg",
+      "img2": "https://m.media-amazon.com/images/I/81p5+bNI0ZL._SL1500_.jpg",
+      "img3": "https://m.media-amazon.com/images/I/81CS-aMFzCL._SL1500_.jpg",
+      "img4": "https://m.media-amazon.com/images/I/7156frgektL._SL1500_.jpg",
+      "video": "https://m.media-amazon.com/images/I/618lxX-vcTL._SX679_.jpg",
+      "title": "Gold Bond Age Renew Neck & Chest Firming Age Renew Cream, 2 oz., Clinically Tested Skin Firming Cream",
+      "cost": "₹4886",
+      "location": "Kolkata",
+      "distance": "33 km",
+      "description": "Perfect for daily use, this 2 oz. cream is lightweight, non-greasy, and absorbs quickly for a comfortable, refreshed feel."
+    },
+    {
+      "img1": "https://www.srisritattva.com/cdn/shop/products/Tulasi-tablet_f5144a49-b8a9-4408-a29d-61970d141524.jpg?v=1606909543&width=1445",
+      "img2": "https://www.srisritattva.com/cdn/shop/files/1-43.jpg?v=1699447254",
+      "img3": "https://www.srisritattva.com/cdn/shop/files/1-44.jpg?v=1699447254",
+      "img4": "https://m.media-amazon.com/images/I/81T-VNf4BDL._AC_SX679_.jpg",
+      "video": "https://m.media-amazon.com/images/I/81T-VNf4BDL._AC_SX679_.jpg",
+      "title": "Tulasi - Cold & Cough, 60 Tabs | 500mg",
+      "cost": "₹3971",
+      "location": "Chennai",
+      "distance": "9 km",
+      "description": "Sri Sri Tattva Tulasi tablets (500mg, 60 tabs) provide natural relief from cold and cough symptoms, supporting respiratory health and immunity.."
+    },
+    {
+      "img1": "https://www.daburshop.com/cdn/shop/files/1_9c5b39b9-0b96-4852-80e5-a4c9a7a4f7d1_1024x1024.png?v=1733211474",
+      "img2": "https://www.daburshop.com/cdn/shop/files/1_562cf769-ec10-475d-a79f-8846f3a8b738_1024x1024.png?v=1730805540",
+      "img3": "https://www.daburshop.com/cdn/shop/files/3_00a460cb-d939-49f0-ab21-663f032babba_1024x1024.jpg?v=1730108952",
+      "img4": "https://www.daburshop.com/cdn/shop/files/2_4daf6680-4e36-4c81-8189-6850b4e6567b_1024x1024.jpg?v=1730108953",
+      "video": "https://m.media-amazon.com/images/I/61S5qtPqyBL._SX679_.jpg",
+      "title": "Dabur Herb'l Clove Cavity Protection Toothpaste - 200g",
+      "cost": "₹2949",
+      "location": "Ahmedabad",
+      "distance": "1 km",
+"description": "Dabur Herb'l Clove toothpaste (200g) protects against cavities with clove's natural antibacterial power.."
+    },
+    {
+      "img1": "https://www.daburshop.com/cdn/shop/files/1_251609c0-f104-4678-a299-6696889a4afa_1024x1024.png?v=1733211467",
+      "img2": "https://www.daburshop.com/cdn/shop/files/2_fe1a0114-9241-487b-9fd4-6b9f8a64a8e6_1024x1024.jpg?v=1730108747",
+      "img3": "https://www.daburshop.com/cdn/shop/files/2_fe1a0114-9241-487b-9fd4-6b9f8a64a8e6_1024x1024.jpg?v=1730108747",
+      "img4": "https://www.daburshop.com/cdn/shop/files/5_5b381990-d66c-4933-b667-0b8702fa4edb_1024x1024.jpg?v=1730108748",
+      "video": "https://m.media-amazon.com/images/I/6108uSkJQKL._SX679_.jpg",
+      "title": "Dabur Gulabari Rose Glow Cleanser - 100ml",
+      "cost": "₹4492",
+      "location": "Kolkata",
+      "distance": "30 km",
+      "description": "Dabur Gulabari Rose Glow Cleanser (100ml): Cleanses and adds a natural rose glow to your skin."
+    },
+    
+    {
+      "img1": "https://www.daburshop.com/cdn/shop/files/71p0DDw7-VL._SL1500_1024x1024.png?v=1733210268",
+      "img2": "https://www.daburshop.com/cdn/shop/files/3_a1396938-1ee8-46de-b0dc-281ad1333d63_1024x1024.jpg?v=1729834561",
+      "img3": "https://www.daburshop.com/cdn/shop/files/4_d93bf324-4831-4451-84c7-0cbdf0aa3eea_1024x1024.jpg?v=1729834560",
+      "img4": "https://www.daburshop.com/cdn/shop/files/5_bf0187fa-d8cc-4a48-b359-4732638bf6c3_1024x1024.jpg?v=1729834560",
+      "video": "https://m.media-amazon.com/images/I/61RitVgCGML._SX679_.jpg",
+      "title": "Dabur Chyawanprash | 3X Immunity Action | Builds Strength, Stamina & Overall Health - 2kg",
       "cost": "₹1899",
       "location": "Chennai",
-      "distance": "41 km"
+      "distance": "41 km",
+      "description": "Dabur Chyawanprash (2kg): Boosts immunity, strength, stamina, and overall health with a 3X action formula."
     },
     {
-      "img": "https://m.media-amazon.com/images/I/71GM3LR4cCL._SX679_.jpg",
-      "title": "Sesa Ayurvedic Oil",
+      "img1": "https://www.daburshop.com/cdn/shop/files/0_c119eb95-fc93-4242-be55-d8f1abafde02_1024x1024.png?v=1735883743",
+      "img2": "https://www.daburshop.com/cdn/shop/files/1_1c46b6c5-07db-4efb-b652-6ee2b25da0a7_1024x1024.png?v=1730810064",
+      "img3": "https://www.daburshop.com/cdn/shop/files/3_cebfacae-95e4-4440-bbdc-f6a9b22b72cc_1024x1024.png?v=1729670255",
+      "img4": "https://www.daburshop.com/cdn/shop/files/4_121e97d2-333e-4350-878e-a49e26ea4d72_1024x1024.png?v=1729670258",
+      "video": "https://m.media-amazon.com/images/I/71GM3LR4cCL._SX679_.jpg",
+      "title": "Dabur Amla Hair Oil - 550ml",
       "cost": "₹2074",
       "location": "Lucknow",
-      "distance": "4 km"
+      "distance": "4 km",
+      "description": "Dabur Amla Hair Oil (550ml): Nourishes and strengthens hair for healthy growth."
     },
     {
-      "img": "https://m.media-amazon.com/images/I/81rTMrNxnEL._SX679_.jpg",
-      "title": "JAMUN NEEM KARELA ouice",
+      "img1": "https://m.media-amazon.com/images/I/81V7H4Fc+-L._AC_SX679_.jpg",
+      "img2": "https://m.media-amazon.com/images/I/71+PdzwliqL._AC_SX679_.jpg",
+      "img3": "https://m.media-amazon.com/images/I/71psJ8HGIpL._AC_SX679_.jpg",
+      "img4": "https://m.media-amazon.com/images/I/71mHgyLsQrL._AC_SL1500_.jpg",
+      "video": "https://m.media-amazon.com/images/I/81rTMrNxnEL._SX679_.jpg",
+      "title": "Herbal and Ayurvedic Neem Karela Jamun Juice 500ml",
       "cost": "₹3915",
       "location": "Chennai",
-      "distance": "48 km"
+      "distance": "48 km",
+      "description": "Neem Karela Jamun Juice (500ml): A herbal Ayurvedic blend for blood sugar management and overall health.."
     }
   ]
 
