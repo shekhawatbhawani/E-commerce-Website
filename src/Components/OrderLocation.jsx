@@ -19,21 +19,22 @@ const OrderLocation = () => {
       },
     });
   };
+
   return (
-    <div className="py-5 sm:p-10 max-w-xl mx-auto bg-white shadow-lg rounded-lg my-5">
+    <div className="py-6 px-4 sm:px-6 md:px-10 lg:px-12 max-w-2xl mx-auto bg-white shadow-lg rounded-lg my-8">
       <h2 className="text-2xl font-semibold text-gray-700 mb-6 text-center">
         Shipping Information
       </h2>
 
       <form action="/submit" method="post">
         {/* Form Inputs */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           <div>
             <input
               type="text"
               placeholder="Full Name"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
             />
           </div>
           <div>
@@ -42,7 +43,7 @@ const OrderLocation = () => {
               placeholder="PIN Code"
               min={0}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
             />
           </div>
           <div>
@@ -51,7 +52,7 @@ const OrderLocation = () => {
               placeholder="Phone Number"
               min={0}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
             />
           </div>
           <div>
@@ -59,7 +60,7 @@ const OrderLocation = () => {
               type="text"
               placeholder="State"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
             />
           </div>
           <div>
@@ -67,14 +68,14 @@ const OrderLocation = () => {
               type="text"
               placeholder="City"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm"
             />
           </div>
           <div>
             <textarea
               placeholder="Full Address"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-sm resize-none"
               rows="3"
             />
           </div>
@@ -133,7 +134,8 @@ const OrderLocation = () => {
         <div className="mt-8">
           <button
             className="w-full bg-gradient-to-r from-green-400 to-green-500 text-white py-3 rounded-xl shadow-md hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300"
-            onClick={handelSave} type="submit"
+            onClick={handelSave}
+            type="submit"
           >
             Save & Continue
           </button>

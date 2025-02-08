@@ -7,7 +7,7 @@ import { ImGithub } from 'react-icons/im'
 
 const HeaderSliderImage = ({img}) => {
   return (
-      <div className="flex justify-center items-center py-4 w-full">
+      <div className="flex justify m-auto-center items-center py-4 w-full">
         <img
           className="w-full max-w-screen-md h-[200px] rounded-xl shadow-lg"
           src={img}

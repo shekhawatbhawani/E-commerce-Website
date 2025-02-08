@@ -101,7 +101,7 @@ const Body = () => {
         Trending Products
       </h1>
       {/* Slider Cards */}
-      <div className="py-10 px-2">
+      <div className="py-10 px-12">
         <Slider {...settings}>
           {sliderData.map((e, i) => {
             return (
@@ -123,7 +123,7 @@ const Body = () => {
       </div>
 
       {/* Video  */}
-      <div className="flex w-[96%] justify-center items-center bg-gray-100 py-4 relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
+      <div className="flex w-[100%] m-auto justify-center items-center bg-gray-100 py-4 relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
         <video
           src={GIFVideo}
           className="w-full max-w-6xl h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] rounded-xl shadow-lg object-cover"

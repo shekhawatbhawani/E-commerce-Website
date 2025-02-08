@@ -1,28 +1,28 @@
 import React from 'react';
-import { useLocation , useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Review = () => {
   const location = useLocation();
   const { name, img1, cost, orderLocation, distance } = location.state;
   console.log(img1, name, cost, distance);
 
-  let navigate = useNavigate()
-  let handelSubmit = ()=>{
-    navigate("/order-submitted")
-  }
+  let navigate = useNavigate();
+  let handelSubmit = () => {
+    navigate("/order-submitted");
+  };
 
-  let handelTotal = (Price)=>{
-    let total = parseInt(Price) + 15
- return `₹${total}`
-  }
+  let handelTotal = (Price) => {
+    let total = parseInt(Price) + 15;
+    return `₹${total}`;
+  };
 
   return (
-    <div className="container w-xl mx-auto p-6">
+    <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Card Layout */}
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden p-6 sm:p-8 lg:p-10">
         
         {/* Image Section */}
-        <div className="w-full h-72 mb-6">
+        <div className="w-full h-56 sm:h-72 lg:h-80 mb-6">
           <img
             className="object-cover w-full h-full rounded-lg shadow-md"
             src={img1}
@@ -32,14 +32,16 @@ const Review = () => {
 
         {/* Order Details Section */}
         <div className="w-full">
-          <h1 className="text-3xl font-semibold mb-4 text-gray-800">Order Summary</h1>
+          <h1 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-800">
+            Order Summary
+          </h1>
           <p className="text-gray-600 mb-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dignissimos fugiat sint, aliquam nesciunt aliquid.
           </p>
 
           {/* Total Amount Section */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md mb-6">
-            <p className="text-xl font-semibold mb-4 text-gray-700">Total Amount</p>
+          <div className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md mb-6">
+            <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-700">Total Amount</p>
             <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
               <p>Item Price:</p>
               <p className="font-semibold text-right">{cost}</p>
@@ -56,8 +58,8 @@ const Review = () => {
           </div>
 
           {/* Payment Method Section */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md mb-6">
-            <p className="text-xl font-semibold mb-4 text-gray-700">Payment Method</p>
+          <div className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md mb-6">
+            <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-700">Payment Method</p>
             <div className="space-y-3">
               <div>
                 <input type="radio" id="cash" name="payment" className="mr-2" />
@@ -79,8 +81,11 @@ const Review = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="text-center md:text-right">
-            <button className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 w-full md:w-auto" onClick={handelSubmit} >
+          <div className="text-center sm:text-right">
+            <button
+              className="bg-blue-600 text-white font-semibold px-6 sm:px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 w-full sm:w-auto"
+              onClick={handelSubmit}
+            >
               Submit Order
             </button>
           </div>
